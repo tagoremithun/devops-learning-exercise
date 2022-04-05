@@ -1,31 +1,29 @@
 #!/bin/sh
 # This shell script which is call by cron to make Application Tomcat instance Alive
-# version 1.0
-#checking Port 8080
-  if (( $(netstat -an|grep :8080|wc -l) < 1 ))
+
+ScriptFolder="/APP/script/"
+Log_location="$ScriptFolder/Tomcat_Restart_log.log"
+
+if (( $(netstat -an|grep :8080|wc -l) < 1 ))
   then
   
-			cd /APP/tomcat/tomcat0/apache-tomcat-8.5.54/bin;
+			echo "$[Problem] - 8080 is not running!!! on at $(date)"  >> $Log_location
+			echo "8080" > $ScriptFolder/tomcatRestart.lock
+			wait
+			cd /APP/tomcat/tomcat0/apache-tomcat-8.5.54/bin/;
 			wait
             ./shutdown.sh;
 			wait
-			## clear tomcat cache 
-			./clear_cache.sh;
+		    ## clear cache 
+			rm -rf /APP/tomcat/tomcat0/apache-tomcat-8.5.54/work/Catalina/localhost
 			wait
-            ./start_tomcat.sh
+              cd /APP/tomcat/tomcat0/apache-tomcat-8.5.54/bin/;
+            ./startup.sh
 			wait
-            sleep 10
+            sleep 5
 			rm $ScriptFolder/tomcatRestart.lock
 			wait
-                 
-      cd /home/${EnvUser}/${tomcat};
-            	
-			echo "${EnvName} [Restarted] - ${port} is Restarted on $HOSTNAME at $(date) ">>$Log_location
-			
-		    #Send Mail
-			MessageBody="\n ${EnvName} AppServer-${AppServer} Hostname:$HOSTNAME Tomcat - ${port} has been restated \n Now  ${port} instance is up and running \n"
-            MessageHeader="Acknowledged:${EnvName}: $HOSTNAME - ${port} has been restated. at $(date)" 
-			echo -e "$MessageBody" | mailx -s "$MessageHeader" "$USER1"
-		    
+            echo "[Restarted] - 8080 is Restarted on at $(date) ">>$Log_location
+				    echo "============================================= ">>$Log_location
 			
 	fi
