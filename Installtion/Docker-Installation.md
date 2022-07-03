@@ -1,0 +1,30 @@
+# Docker Installation
+
+1. Docker Desktop from Docker official web site
+2. Install it (if windows then add  Use WSL 2 instead of Hyper-V ) --follow on website
+3. check docker is running or not.
+4. create a new project with Dockerfile (no file extension)
+5. Publish your project to DockerHub 
+6. pull the code from DockerHub ( you can check play with docker)
+7. Run the docker image
+
+############################ Command ###############################
+
+login to docker
+
+docker login -u 789017709123452 -p Password docker.io
+
+docker push  789017709123452/hello-world:hello-world
+
+docker pull 789017709123452/hello-world:hello-world
+
+docker run 789017709123452/hello-world
+
+docker run -d -p 80:80 docker/getting-started
+
+docker --help // for more command
+
+docker ps   // process
+
+docker image ls // list of images
+
