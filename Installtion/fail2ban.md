@@ -48,3 +48,9 @@ systemctl start firewalld
 
 ----------------
 
+
+fail2ban-client status
+
+
+
+fail2ban-client set sshd unbanip IPADDRESS
