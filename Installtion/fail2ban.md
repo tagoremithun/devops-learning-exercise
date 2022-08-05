@@ -1,6 +1,8 @@
 
 ## helped from https://www.liquidweb.com/kb/install-fail2ban-on-centos-7/
 
+https://www.howtoforge.com/tutorial/how-to-install-fail2ban-on-centos/ good resource 
+
 # What Is Fail2Ban?
 Fail2ban is an open-source software that actively scans the servers log files in real-time for any brute force login attempts, and if found, summarily blocks the attack using the servers firewall software (firewalld or iptables). Fail2Ban runs as a background process and continuously scans the log files for unusual login patterns and security breach attempts.
 
@@ -8,6 +10,8 @@ Fail2ban is an open-source software that actively scans the servers log files in
 
 1. yum install epel-release
 2. yum install fail2ban fail2ban-systemd
+
+3. yum update -y selinux-policy*
 
 
 cp -pf /etc/fail2ban/jail.conf /etc/fail2ban/jail.local

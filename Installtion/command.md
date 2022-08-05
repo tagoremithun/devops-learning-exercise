@@ -1,7 +1,10 @@
 # Java, MySQL, Apache tomcat installtion and configuration for web application 
 
 #Java setup
-
+  1. yum update
+  2. yum install java-11-openjdk-devel // for openjdk 11
+  3. alternatives --config java  // select java
+  4. java –-version // java version
 
 #Apachec server install on centos 
 
@@ -27,6 +30,11 @@
  5. psql postgres // enter postgre bash 
 
  6. netstat -plunt |grep postgres //  check service is running or not 
+
+ ######========SSH tunnel ===========
+
+ ssh -L 63333:localhost:5432 postgres@192.168.0.106
+
 
 #Apache tomcat installation and port configuration
 
@@ -73,7 +81,7 @@ on http.conf /etc/httpd/conf/
 
 ServerName 192.168.0.103:80
 
- md /etc/httpd/conf.d/welcome.conf /etc/httpd/conf.d/welcome.conf_original
+   mv /etc/httpd/conf.d/welcome.conf /etc/httpd/conf.d/welcome.conf_original
    80  mv /etc/httpd/conf.d/welcome.conf /etc/httpd/conf.d/welcome.conf_original
    81  cp /etc/httpd/conf/httpd.conf /etc/httpd/conf/httpd.conf_original
 
@@ -86,9 +94,12 @@ make server103.csr
 
  vi /etc/httpd/conf.d/ssl.conf
  
- openssl x509 -in server103.csr -out server103.crt -req -signkey server103.key -days 3650
+ openssl x509 -in server106.csr -out server106.crt -req -signkey server106.key -days 3650
 
 
+
+
+192.168.0.106
  ======================== set static ip for vm =========================
  1. find out ip using "ip a" command
  2. find out name of ip that show on
@@ -107,3 +118,18 @@ set and save
 
 
 ====================================   
+
+
+============================python3 install ===========
+
+https://rakeshjain-devops.medium.com/how-to-install-python-3-on-centos-7-7-using-yum-and-source-and-set-as-default-1dee13396f7
+
+
+
+systemctl restart sshd
+
+
+
+RewriteEngine On 
+RewriteCond %{HTTPS} off 
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
