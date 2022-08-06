@@ -1,5 +1,4 @@
 ##################### Process Monitoring ##################
-
 ps aux | less  
 top
 htop     //Interactively monitor the system
@@ -14,4 +13,39 @@ lsof -i 4 //ip4
 ps aux | awk '$8 ~ /^[Zz]/'                //  find zombie process 
 ps -A -ostat,pid,ppid | grep -e '[zZ]'    // find process id
 kill -9 <parent_process_ID>              // kill the parent process
+
+############### system performance #############################
+
+nmon   ///Displays local system statistics in interactive mode and records system statistics in recording mode.
+
+Nmon is a fully interactive performance monitoring command-line utility tool for Linux.
+
+nmon  --full form -- Nigel's Monitor
+
+iostat  ///command in Linux is used for monitoring system input/output statistics for devices and partition
+
+
+# Memory load
+sar -r -s 14:30:03 -e 14:52:40 -f /var/log/sa/sa09 | grep Average: | awk '{print $4}'
+sar -r -s 14.55:33 -e 15:30:21 -f /var/log/sa/sa09 | grep Average: | awk '{print $4}'
+sar -r -s 15:07:52 -e 15:17.18 -f /var/log/sa/sa09 | grep Average: | awk '{print $4}'
+
+# Cpu idle
+sar -u -s 14:30:03 -e 14:52:40 -f /var/log/sa/sa09 | grep Average: | awk '{print $8}'
+sar -u -s 14.55:33 -e 15:30:21 -f /var/log/sa/sa09 | grep Average: | awk '{print $8}'
+sar -u -s 15:07:52 -e 15:17.18 -f /var/log/sa/sa09 | grep Average: | awk '{print $8}'
+
+# R/W
+sar -b -s 14:30:03 -e 14:52:40 -f /var/log/sa/sa09 | grep Average: | awk '{print $2}'
+sar -b -s 14.55:33 -e 15:30:21 -f /var/log/sa/sa09 | grep Average: | awk '{print $2}'
+sar -b -s 15:07:52 -e 15:17.18 -f /var/log/sa/sa09 | grep Average: | awk '{print $2}'
+
+#Load
+sar -q -s 14:30:03 -e 14:52:40 -f /var/log/sa/sa09 | grep Average: | awk '{print $6}'
+sar -q -s 14.55:33 -e 15:30:21 -f /var/log/sa/sa09 | grep Average: | awk '{print $6}'
+sar -q -s 15:07:52 -e 15:17.18 -f /var/log/sa/sa09 | grep Average: | awk '{print $6}'
+
+--------------------------------
+
+vmstat ///command in Linux/Unix is a performance monitoring command 
 
