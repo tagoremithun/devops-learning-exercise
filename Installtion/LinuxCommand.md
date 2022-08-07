@@ -49,3 +49,16 @@ sar -q -s 15:07:52 -e 15:17.18 -f /var/log/sa/sa09 | grep Average: | awk '{print
 
 vmstat ///command in Linux/Unix is a performance monitoring command 
 
+
+############### Network Tool #############################
+
+traceroute   //traceroute command in Linux prints the route that a packet takes to reach the host.
+
+
+mtr        //command is a combination of ping and traceroute commands.
+
+mtr google.com
+
+ping -c 5 www.geeksforgeeks.org
+
+ping -c 5 -q www.geeksforgeeks.org
