@@ -62,3 +62,25 @@ mtr google.com
 ping -c 5 www.geeksforgeeks.org
 
 ping -c 5 -q www.geeksforgeeks.org
+
+nmap // With Nmap, server administrators can quickly reveal hosts and services, search for security issues, and scan for open ports.
+
+ ##Several functions can be used to detect firewall settings across the given hosts, but the -sA flag is the most common.
+
+nmap -sA 103.125.252.40 
+
+nmap -sL 103.125.252.40 
+
+
+netstat -a 
+
+
+netstat -at  //To list all tcp ports.
+
+netstat -au  // To list all udp ports.
+
+netstat -an | grep ':80'
+
+netstat -l // To list only the listening ports.
+
+netstat -tulpn  
