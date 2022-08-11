@@ -71,6 +71,7 @@ nmap -sA 103.125.252.40
 
 nmap -sL 103.125.252.40 
 
+iwconfig   // wireless connection 
 
 netstat -a 
 
@@ -84,3 +85,59 @@ netstat -an | grep ':80'
 netstat -l // To list only the listening ports.
 
 netstat -tulpn  
+
+
+airmon-ng check    // Airmon-ng is used to read all the packets of data even if they are not sent to us. It controls the traffic received only on the wired/wireless networks. 
+Check if the router is vulnerable or not.
+
+
+
+tcpdump -i eth0  // command-line packets sniffer or package analyzer tool 
+
+
+tcpdump -D // display all interfaces 
+
+tcpdump -i eth0 port 22 // capture packets for specific port 22
+
+
+tcpdump -i eth0 src 192.168.0.101 //
+
+
+tcpdump -i eth0 dst 50.116.66.139
+
+
+
+ airodump-ng check    ///Airodump-ng is used for packet capture, capturing raw 802.11 frames.
+
+
+ Iptables is a Linux command line firewall that allows system administrators to manage incoming and outgoing traffic via a set of configurable table rules.
+
+systemctl start iptables
+systemctl stop iptables
+systemctl restart iptables
+
+
+iptables -L -n -v  // check your existing rules,
+
+
+
+iptables -A INPUT -s xxx.xxx.xxx.xxx -j DROP   // unusual or abusive activity from an IP address you can block that IP address
+
+
+iptables -D INPUT -s xxx.xxx.xxx.xxx -j DROP   // no longer want to block requests from specific IP address
+
+
+host facebook.com
+
+whois 157.240.15.35 
+
+iptables -A OUTPUT -p tcp -d 66.220.144.0/20 -j DROP  // block ip 
+
+
+iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 25 -j REDIRECT --to-port 2525  // port forwardng 
+
+
+iptables -A INPUT -p icmp -i eth0 -j DROP   // ping drop
+
+
+dig      // gather DNS information
