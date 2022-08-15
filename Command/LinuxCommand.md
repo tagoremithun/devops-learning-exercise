@@ -1,5 +1,7 @@
 ##################### Process Monitoring ##################
 ps aux | less  
+ps aux --sort -rss   
+
 top
 htop     //Interactively monitor the system
 atop     // amount of load on the system’s resources at the process level
@@ -45,7 +47,7 @@ sar -q -s 14:30:03 -e 14:52:40 -f /var/log/sa/sa09 | grep Average: | awk '{print
 sar -q -s 14.55:33 -e 15:30:21 -f /var/log/sa/sa09 | grep Average: | awk '{print $6}'
 sar -q -s 15:07:52 -e 15:17.18 -f /var/log/sa/sa09 | grep Average: | awk '{print $6}'
 
---------------------------------
+-----
 
 vmstat ///command in Linux/Unix is a performance monitoring command 
 
@@ -141,3 +143,39 @@ iptables -A INPUT -p icmp -i eth0 -j DROP   // ping drop
 
 
 dig      // gather DNS information
+
+dig facebook.com ns  // nameserver info
+
+dig facebook.com mx   // mail server info
+
+
+##=============================Terminal Multiplexer=========================================
+
+screen
+
+tmux 
+
+##-------------------------------------------------------------
+
+uname -a  //system information
+
+uname  -s //kernel inforamtion
+
+df   // disk free 
+
+du -sh /opt/  // disk usage
+
+history  
+
+
+
+###============================other Important command ===========================
+
+swapoff -a && swapon -a  // swap off and on
+#Emptying the buffers cache
+free && sync && echo 3 > /proc/sys/vm/drop_caches && free
+echo 3 > /proc/sys/vm/drop_caches
+
+kill -9 $(ps aux | grep "java" | grep -v 'grep' | awk '{print $2}')  // kill java all process
+
+find /sourcelocation -maxdepth 1 -mtime +15 -exec mv "{}" /destination/ \;
