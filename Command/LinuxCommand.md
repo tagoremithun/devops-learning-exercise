@@ -167,7 +167,16 @@ du -sh /opt/  // disk usage
 
 history  
 
+#SystemTap—filtering and analyzing system data
 
+#strace is a Linux command-line utility that is a useful and powerful tool to capture, monitor, and troubleshoot the programs in a system.
+
+#Debugging Programs
+#Troubleshooting Programs
+#Intercept System calls by a process
+#Record system calls by a process
+#Signals received by a process
+#Trace running processes 
 
 ###============================other Important command ===========================
 
