@@ -188,3 +188,5 @@ echo 3 > /proc/sys/vm/drop_caches
 kill -9 $(ps aux | grep "java" | grep -v 'grep' | awk '{print $2}')  // kill java all process
 
 find /sourcelocation -maxdepth 1 -mtime +15 -exec mv "{}" /destination/ \;
+
+### -----------------------------####
