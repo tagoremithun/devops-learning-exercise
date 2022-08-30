@@ -178,6 +178,25 @@ history
 #Signals received by a process
 #Trace running processes 
 
+touch file{1..10}.txt    // multiple file 
+
+awk {print} file1.txt    //Aho, Weinberger, and Kernighan
+
+
+sed //Stands for: Stream editor
+
+sed 's/box/bin/' foxinbox.txt   /// replace box with bin 
+
+sed 's/old_string/new_string/g' filename.txt
+
+sed '$d' filename.txt   // delete last line 
+
+
+grep -i "UNix" geekfile.txt  //  It matches the words like “UNIX”, “Unix”, “unix”.
+
+ps -ef | grep -v "root"     // without root services 
+
+
 ###============================other Important command ===========================
 
 swapoff -a && swapon -a  // swap off and on
@@ -190,3 +209,5 @@ kill -9 $(ps aux | grep "java" | grep -v 'grep' | awk '{print $2}')  // kill jav
 find /sourcelocation -maxdepth 1 -mtime +15 -exec mv "{}" /destination/ \;
 
 ### -----------------------------####
+
+
