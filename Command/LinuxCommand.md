@@ -88,6 +88,7 @@ netstat -l // To list only the listening ports.
 
 netstat -tulpn  
 
+fuser 5000/tcp
 
 airmon-ng check    // Airmon-ng is used to read all the packets of data even if they are not sent to us. It controls the traffic received only on the wired/wireless networks. 
 Check if the router is vulnerable or not.
@@ -196,6 +197,9 @@ grep -i "UNix" geekfile.txt  //  It matches the words like “UNIX”, “Unix�
 
 ps -ef | grep -v "root"     // without root services 
 
+sort file1.txt // sorting by name
+
+
 
 ###============================other Important command ===========================
 
@@ -211,3 +215,9 @@ find /sourcelocation -maxdepth 1 -mtime +15 -exec mv "{}" /destination/ \;
 ### -----------------------------####
 
 
+cat /etc/rsyslog.conf   // all logs
+
+hostnamectl  // check the operating system running on virtual or physical
+
+cat /etc/*-release
+lscpu
