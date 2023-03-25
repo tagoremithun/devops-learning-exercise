@@ -221,3 +221,17 @@ hostnamectl  // check the operating system running on virtual or physical
 
 cat /etc/*-release
 lscpu
+
+
+##---------------------- SSH -------------#
+
+ufw status   // uncomplicated firewall
+ufw allow ssh 
+
+cat /etc/ssh/sshd_config  //configuration
+
+ssh -p2222 user@server
+
+sftp user@server  // stfp access winSCP
+
+ssh -J  user@server user2@server2 
