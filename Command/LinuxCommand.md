@@ -235,3 +235,10 @@ ssh -p2222 user@server
 sftp user@server  // stfp access winSCP
 
 ssh -J  user@server user2@server2 
+
+journalctl -u ssh  //ssh history
+
+sudo etc/shadow | grep scott 
+
+ssh -L 3333:localhost:3306 user@server1
+ 
