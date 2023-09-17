@@ -22,6 +22,8 @@
  3. firewall-cmd --permanent --add-service=http
  4. firewall-cmd --permanent --add-service=https
  5. firewall-cmd --reload
+ sudo firewall-cmd --add-port=80/tcp --permanent
+ sudo firewall-cmd --add-port=443/tcp --permanent
 
  #restart services 
 
@@ -97,7 +99,7 @@ ServerName 192.168.0.103:80
 
 install openssl and 
 
- make server103.key
+make server103.key
 
 make server103.csr
 

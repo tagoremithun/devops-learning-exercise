@@ -88,7 +88,11 @@ netstat -l // To list only the listening ports.
 
 netstat -tulpn  
 
+<<<<<<< HEAD
 nmap -sTU -O 192.168.133.137   ///check open ports
+=======
+fuser 5000/tcp
+>>>>>>> e6392314793d06343db83786cde9c33228f1b8fb
 
 airmon-ng check    // Airmon-ng is used to read all the packets of data even if they are not sent to us. It controls the traffic received only on the wired/wireless networks. 
 Check if the router is vulnerable or not.
@@ -197,6 +201,9 @@ grep -i "UNix" geekfile.txt  //  It matches the words like “UNIX”, “Unix�
 
 ps -ef | grep -v "root"     // without root services 
 
+sort file1.txt // sorting by name
+
+
 
 ###============================other Important command ===========================
 
@@ -212,9 +219,39 @@ find /sourcelocation -maxdepth 1 -mtime +15 -exec mv "{}" /destination/ \;
 ### -----------------------------####
 
 
+<<<<<<< HEAD
 yum list installed | grep php   //check the installed package
 
 
 # MySQL Command
 
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Tagore@123#';  //if problem password
+=======
+cat /etc/rsyslog.conf   // all logs
+
+hostnamectl  // check the operating system running on virtual or physical
+
+cat /etc/*-release
+lscpu
+
+
+##---------------------- SSH -------------#
+
+ufw status   // uncomplicated firewall
+ufw allow ssh 
+
+cat /etc/ssh/sshd_config  //configuration
+
+ssh -p2222 user@server
+
+sftp user@server  // stfp access winSCP
+
+ssh -J  user@server user2@server2 
+
+journalctl -u ssh  //ssh history
+
+sudo etc/shadow | grep scott 
+
+ssh -L 3333:localhost:3306 user@server1
+ 
+>>>>>>> e6392314793d06343db83786cde9c33228f1b8fb
