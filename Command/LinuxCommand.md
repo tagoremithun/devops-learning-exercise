@@ -88,6 +88,7 @@ netstat -l // To list only the listening ports.
 
 netstat -tulpn  
 
+nmap -sTU -O 192.168.133.137   ///check open ports
 
 airmon-ng check    // Airmon-ng is used to read all the packets of data even if they are not sent to us. It controls the traffic received only on the wired/wireless networks. 
 Check if the router is vulnerable or not.
@@ -211,3 +212,9 @@ find /sourcelocation -maxdepth 1 -mtime +15 -exec mv "{}" /destination/ \;
 ### -----------------------------####
 
 
+yum list installed | grep php   //check the installed package
+
+
+# MySQL Command
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Tagore@123#';  //if problem password

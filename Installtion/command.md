@@ -4,7 +4,16 @@
   1. yum update
   2. yum install java-11-openjdk-devel // for openjdk 11
   3. alternatives --config java  // select java
-  4. java –-version // java version
+  4. java --version // java version
+
+ #JAVA_HOME setup
+ 1. java --version
+ 2. export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.20.0.8-1.el7_9.x86_64
+ 3. export PATH=$PATH:$JAVA_HOME 
+
+
+ 
+
 
 #Apachec server install on centos 
 
@@ -14,7 +23,7 @@
  4. firewall-cmd --permanent --add-service=https
  5. firewall-cmd --reload
 
- # restart services 
+ #restart services 
 
  1. systemctl start httpd
  2. systemctl stop httpd

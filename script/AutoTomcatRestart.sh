@@ -24,6 +24,6 @@ if (( $(netstat -an|grep :8080|wc -l) < 1 ))
 			rm $ScriptFolder/tomcatRestart.lock
 			wait
             echo "[Restarted] - 8080 is Restarted on at $(date) ">>$Log_location
-				    echo "============================================= ">>$Log_location
+	        echo "============================================= ">>$Log_location
 			
 	fi
