@@ -16,5 +16,32 @@ docker stop 88c6415f8d26 // stop container
  docker build -t getting-started .
 
  docker run -dp 127.0.0.1:3000:3000 getting-started   // -d detach -p publish
+ 
+ docker run -p 8080:8080 -p 50000:50000 jenkins 
 
  docker stop 2c5
+ 
+ docker rmi <image_name>
+
+ docker system prune  //very useful
+
+ docker stats  // docker statitic
+
+ docker inspect 
+
+ docker run -it app
+
+ docker run -it --name=contianer_name app
+
+
+ winpty docker run -ti alpine
+
+ ## docker compose
+ 
+docker-compose build
+
+docker-compose up -d
+
+docker ps
+
+docker inspect jenkins   //images description 

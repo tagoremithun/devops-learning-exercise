@@ -28,3 +28,22 @@ docker ps   // process
 
 docker image ls // list of images
 
+docker volume create todo-db   // create volume
+
+docker run -dp 127.0.0.1:3000:3000 --mount type=volume,src=todo-db,target=/etc/todos getting-started
+
+docker volume inspect todo-db
+
+docker compose up -d
+
+docker exec -it <mysql-container-id> mysql -u root -p
+
+docker exec container-id /usr/bin/mysqldump -u username database-name > dump.sql	
+
+docker image history getting-started
+
+docker run -it jenkins/jenkins bash
+
+==================
+
+docker init   // docker initialization
