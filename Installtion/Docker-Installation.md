@@ -47,3 +47,7 @@ docker run -it jenkins/jenkins bash
 ==================
 
 docker init   // docker initialization
+
+docker compose up --build
+
+docker compose up --build -d  //run background

@@ -255,3 +255,9 @@ sudo etc/shadow | grep scott
 ssh -L 3333:localhost:3306 user@server1
  
 >>>>>>> e6392314793d06343db83786cde9c33228f1b8fb
+
+
+
+find /home/basa/backup/ -maxdepth 1 -type f -name 'upload*' -mtime +5 -delete
+
+find /home/basa/backup/ -maxdepth 1 -type f -name 'basa_app*' -mtime +2 -delete

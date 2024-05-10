@@ -17,13 +17,15 @@ docker stop 88c6415f8d26 // stop container
 
  docker run -dp 127.0.0.1:3000:3000 getting-started   // -d detach -p publish
  
- docker run -p 8080:8080 -p 50000:50000 jenkins 
+ docker run -p 8080:8080 -p 6000:6000 jenkins 
 
  docker stop 2c5
  
  docker rmi <image_name>
 
  docker system prune  //very useful
+
+ docker purne // automatically removes the resources not associated with a container.
 
  docker stats  // docker statitic
 
@@ -34,7 +36,9 @@ docker stop 88c6415f8d26 // stop container
  docker run -it --name=contianer_name app
 
 
- winpty docker run -ti alpine
+ winpty docker run -ti alpine  
+
+  winpty docker exec -it pmamp-mysql-1 bash  // container bash
 
  ## docker compose
  
@@ -44,4 +48,39 @@ docker-compose up -d
 
 docker ps
 
+
+docker exec -it <containerID> bash // in a bash 
+
 docker inspect jenkins   //images description 
+
+docker top ContainerID 
+
+docker ps -a
+
+docker kill ContainerID
+
+docker volume ls
+ 
+docker volume create jenkins_vol
+
+docker run -d -v jenkins_vol:/var/jenkins_home --restart=on-failure -p 8080:8080 jenkins/jenkins
+
+
+
+docker add --help	
+
+
+docker image inspect imageName //all information about image 
+
+docker tag old_image_name new-image_name
+
+
+docker run --name nodeApp1 -p 8080:3000 nodeapp1 //container name run
+
+docker run --rm --name nodeApp1 -p 8080:3000 nodeapp1  //remove containeer when stop the docker
+
+docker run --rm --name nodeApp1 -dp 8080:3000 nodeapp1 //deattached the images
+
+#search images 
+
+docker search image_name

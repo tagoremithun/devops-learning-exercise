@@ -5,6 +5,8 @@ git config --global user.email "@gma"
 git init  // initialized git
 git restore . //restore file
 
+git remote add origin git@github.com:tagoremithun/mithun.blog.git
+
 
 git status
 git log
