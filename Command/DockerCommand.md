@@ -84,3 +84,9 @@ docker run --rm --name nodeApp1 -dp 8080:3000 nodeapp1 //deattached the images
 #search images 
 
 docker search image_name
+
+===================Docker compose==================
+
+docker-composer up -d <service_name>
+
+docker-compose run --rm composer create-project --prefer-dist laravel/laravel ##laravel project creation
