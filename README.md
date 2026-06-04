@@ -6,7 +6,7 @@
 **2. Version Control**</br>
         GitHub, Bitbucket</br>
 **3. Programming & Scripting**</br>
-        Python (highly recommended)</br>
+        Python </br>
         Bash</br>
 **4. CI/CD**</br>
         Jenkins</br>
@@ -19,7 +19,7 @@
 **6. Container Orchestration**</br>
         Kubernetes (K8s)</br>
 **7. Infrastructure as Code (IaC)**</br>
-        Terraform (must-have)</br>
+        Terraform </br>
         Ansible</br>
 **8. Cloud Platforms**</br>
         AWS </br>
