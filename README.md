@@ -1,50 +1,50 @@
 # My DevOps Learning Roadmap
-**1. Operating Systems & Networking**
-        Linux (Ubuntu, CentOS, RHEL)
-        Shell Scripting (Bash)
-        Networking fundamentals (DNS, HTTP/HTTPS, TCP/IP, Load Balancers)
-**2. Version Control**
-        GitHub, Bitbucket
-**3. Programming & Scripting**
-        Python (highly recommended)
-        Bash
-**4. CI/CD**
-        Jenkins
-        GitHub Actions
-        GitLab CI/CD
-**5. Containers**
-        Docker
-        Docker Compose
-        Container Security basics
-**6. Container Orchestration**
-        Kubernetes (K8s)
-**7. Infrastructure as Code (IaC)**
-        Terraform (must-have)
-        Ansible
-**8. Cloud Platforms**
-        AWS 
-        EC2
-        VPC
-        IAM
-        S3
-        RDS
-        EKS
-        ECS
-        Route 53
-        CloudWatch
-        Lambda
-**9. Monitoring & Observability**
-        Zabbix
-        Prometheus
-        Grafana
-        ELK Stack / OpenSearch
-**10. Security (DevSecOps)**
-        SonarQube
-        Trivy
-        Snyk
-        HashiCorp Vault
-        OWASP concepts
-**11. Performance & Testing**
-        JMeter
+**1. Operating Systems & Networking** </br>
+        Linux (Ubuntu, CentOS, RHEL) </br>
+        Shell Scripting (Bash) </br>
+        Networking fundamentals (DNS, HTTP/HTTPS, TCP/IP, Load Balancers) </br>
+**2. Version Control**</br>
+        GitHub, Bitbucket</br>
+**3. Programming & Scripting**</br>
+        Python (highly recommended)</br>
+        Bash</br>
+**4. CI/CD**</br>
+        Jenkins</br>
+        GitHub Actions</br>
+        GitLab CI/CD</br>
+**5. Containers**</br>
+        Docker</br>
+        Docker Compose</br>
+        Container Security basics</br>
+**6. Container Orchestration**</br>
+        Kubernetes (K8s)</br>
+**7. Infrastructure as Code (IaC)**</br>
+        Terraform (must-have)</br>
+        Ansible</br>
+**8. Cloud Platforms**</br>
+        AWS </br>
+        EC2</br>
+        VPC</br>
+        IAM</br>
+        S3</br>
+        RDS</br>
+        EKS</br>
+        ECS</br>
+        Route 53</br>
+        CloudWatch</br>
+        Lambda</br>
+**9. Monitoring & Observability**</br>
+        Zabbix</br>
+        Prometheus</br>
+        Grafana</br>
+        ELK Stack / OpenSearch</br>
+**10. Security (DevSecOps)**</br>
+        SonarQube</br>
+        Trivy</br>
+        Snyk</br>
+        HashiCorp Vault</br>
+        OWASP concepts</br>
+**11. Performance & Testing** </br>
+        JMeter</br>
 ##
                
