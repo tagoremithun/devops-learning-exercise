@@ -47,5 +47,5 @@
 **11. Performance & Testing** </br>
         JMeter</br>
 ## Other Learning Tools and Technology
-** 1. Ticketing system **
+**1. Ticketing system**
                
