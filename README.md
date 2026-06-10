@@ -1,6 +1,6 @@
 # My DevOps Learning Roadmap
 **1. Operating Systems & Networking** </br>
-        Linux (Ubuntu, CentOS, RHEL) </br>
+       <li> Linux (Ubuntu, CentOS, RHEL)</li> </br>
         Shell Scripting (Bash) </br>
         Networking fundamentals (DNS, HTTP/HTTPS, TCP/IP, Load Balancers) </br>
 **2. Version Control**</br>
