@@ -21,8 +21,7 @@
 **7. Infrastructure as Code (IaC)**</br>
         Terraform </br>
         Ansible</br>
-**8. Cloud Platforms**</br>
-        AWS </br>
+**8. Cloud Platforms-AWS**</br>
         EC2</br>
         VPC</br>
         IAM</br>
