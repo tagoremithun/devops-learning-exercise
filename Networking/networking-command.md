@@ -1,11 +1,11 @@
 # Networking Command
 
 **Connectivity & Reachability**
-ping google.com                  # Basic reachability test
-ping -c 4 google.com             # Limit to 4 packets
-traceroute google.com            # Trace packet path (Linux)
-tracert google.com               # Trace packet path (Windows)
-mtr google.com                   # Live traceroute (ping + traceroute)
+1. ping google.com                  # Basic reachability test
+2. ping -c 4 google.com             # Limit to 4 packets
+3. traceroute google.com            # Trace packet path (Linux)
+4. tracert google.com               # Trace packet path (Windows)
+5. mtr google.com                   # Live traceroute (ping + traceroute)
 
 **DNS Lookup**
 nslookup google.com              # Basic DNS query
